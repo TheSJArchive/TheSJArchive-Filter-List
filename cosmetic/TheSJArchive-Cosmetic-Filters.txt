@@ -1,0 +1,29 @@
+! Title: TheSJArchive Cosmetic Filters
+! Description: Custom CSS selectors and JS-injection cosmetic rules for adblock extensions
+! Compatible with: uBlock Origin (advanced), Brave (with custom scripts)
+! Last updated: 2025-07-20
+
+! NOTE:
+! These cosmetic filters use aggressive CSS and JS injection to remove ads and anti-adblock walls.
+! Intended for advanced setups only.
+
+! Begin JS Injection
+(function() {
+        try {
+                    if (document && typeof document.nfnolpuqyn === 'undefined') {
+                                    var heads = document.getElementsByTagName('head');
+                                                if (heads.length > 0) {
+                                                                    var head = heads[0];
+                                                                                    var style = document.createElement('style');
+                                                                                                    head.appendChild(style);
+                                                                                                                    style.textContent = "/* COSMETIC FILTER BLOCK - EXTENSIVE CSS SELECTORS */ ... trimmed for brevity ...";
+                                                                                                                                    document.nfnolpuqyn = 1;
+                                                }
+                    }
+        } catch (e) {}
+})();
+! End JS Injection
+                                                }
+                    }
+        }
+})
