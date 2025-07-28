@@ -1,0 +1,98 @@
+! Title: TheSJArchive Filter List
+! Description: Cleaned, non-conflicting custom filter list for Brave, uBlock, and AdGuard
+! Compatible with: Brave, uBlock Origin, AdGuard
+! Last updated: 2025-07-20
+
+! =====================
+! === ALLOW RULES ===
+! =====================
+
+@@||a2zapk.com/images/Loading.gif$image
+@@||a2zapk.io/dload/*
+@@||a2zapk.io/images/*$image
+@@||accounts.google.com^
+@@||arclight.vimeo.com^
+@@||cdn-images.mailchimp.com/embedcode/*$stylesheet
+@@||cdn.discordapp.com/*
+@@||cdn.jsdelivr.net/npm/uikit@3.6.18/*$script
+@@||cdn.myopenpass.com^
+@@||challenges.cloudflare.com^
+@@||challenges.cloudflare.com/turnstile/v0/api.js$script
+@@||cloudflareinsights.com^$other
+@@||cloudfront.net^
+@@||d3mzokty951c5w.cloudfront.net^$script
+@@||demand.supply^$script
+@@||devfiles.pages.dev^
+@@||fonts.googleapis.com^
+@@||googleapis.com^$script
+@@||googletagmanager.com^
+@@||googlesyndication.com^
+@@||googleusercontent.com^
+@@||liteapks.com/cdn-cgi/*$xhr
+@@||liteapks.com/download/*$document
+@@||liteapks.com/wp-content/*
+@@||liteapks.com/wp-json/*$xhr
+@@||my.rtmark.net/gid.js$xhr
+@@||player.vimeo.com^
+@@||player.vimeo.com/video/https:/vimeo.com/*$subdocument
+@@||play.google.com^$other
+@@||play.google.com^$xhr
+@@||pupilkang.top^$xhr
+@@||recaptcha.net^$script
+@@||sentry.io^$other
+@@||spiderdown.com^$download
+@@||token.awswaf.com^
+@@||typekit.net^$image
+@@||vimeocdn.com^
+@@||vimeocdn.com^$script
+@@||vumbnail.com^$image
+@@||www.google.com/recaptcha/*
+@@||www.google.com/recaptcha/api2/*
+@@||www.gstatic.com/recaptcha/*$stylesheet
+@@||www.google.com/recaptcha/*$script
+
+! =====================
+! === BLOCK RULES ===
+! =====================
+
+||a-ads.com^
+||ad.doubleclick.net^
+||apkdepothub.com^
+||apokreaboil.shop^
+||cdn.rizty.com^$script
+||cdn.rizty.com/_astro/*$script
+||cdn.rizty.com/passion-survey/*$document
+||chaturbate.com^
+||clickadu.com^$xhr
+||cleartracknetwork.com^
+||cleartracknetwork.com^$document
+||cleartracknetwork.com^$script
+||displayvertising.com^
+||doubleclick.net^$script
+||economictimes.com^
+||ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20250625&st=env$xhr
+||fastly.jsdelivr.net/npm/disable-devtool/*$script
+||fbcdn.net^$stylesheet
+||fundingchoicesmessages.google.com/el/*$xhr
+||hbuagtcgvjqaz.com^$script
+||honey-comics.com^
+||linariabigg.com^$other
+||mobi-dl-d.com^$download
+||mpbsunbusk.com^$other
+||nl.bkprglyptic.shop^$other
+||pagead2.googlesyndication.com^$script
+||paymeindia.in/*$image
+||pestersmingler.world^$other
+||pupilkang.top^$other
+||rr5---sn-a5mekn6k.googlevideo.com^$media
+||rr6---sn-bvvbaxivnuxqjvm-a5nl.googlevideo.com^$media
+||shallowskiffs.top$loadurl
+||thoraxuntucks.top^$xhr
+||ukankingwithea.com^
+||undaymidydle.com^$other
+||unpkg.com/sweetalert/dist/sweetalert.min.js$script
+||uploady.io^$popup
+||weedowbewhore.shop^$document
+||weedowbewhore.shop^$other
+||www.google.com/gen_204$other
+||zintrack.com^$script
