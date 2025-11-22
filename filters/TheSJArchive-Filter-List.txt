@@ -1,7 +1,7 @@
 ! Title: TheSJArchive Filter List
 ! Description: Cleaned, non-conflicting custom filter list for Brave, uBlock, and AdGuard
 ! Compatible with: Brave, uBlock Origin, AdGuard
-! Last updated: 2025-07-20
+! Last updated: 2025-11-20
 
 ! =====================
 ! === ALLOW RULES ===
