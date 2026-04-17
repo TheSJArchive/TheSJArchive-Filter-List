@@ -1,30 +1,22 @@
 ! Title: TheSJArchive Cosmetic Filters
-! Description: Custom CSS selectors and JS-injection cosmetic rules for adblock extensions
-! Compatible with: uBlock Origin (advanced), Brave (with custom scripts)
-! Last updated: 2025-07-20
+! Description: Targeted overlay / popup removal
+! Last updated: 2026-04-17
 
-! NOTE:
-! These cosmetic filters use aggressive CSS and JS injection to remove ads and anti-adblock walls.
-! Intended for advanced setups only.
+! =========================
+! TOOLXOX (anti-adblock popup)
+! =========================
 
-! Begin JS Injection
-(function() {
-        try {
-                    if (document && typeof document.nfnolpuqyn === 'undefined') {
-                                    var heads = document.getElementsByTagName('head');
-                                                if (heads.length > 0) {
-                                                                    var head = heads[0];
-                                                                                    var style = document.createElement('style');
-                                                                                                    head.appendChild(style);
-                                                                                                                    style.textContent = "/* COSMETIC FILTER BLOCK - EXTENSIVE CSS SELECTORS */ ... trimmed for brevity ...";
-                                                                                                                                    document.nfnolpuqyn = 1;
-                                                }
-                    }
-        } catch (e) {}
-})();
-! End JS Injection
-                                                }
-                    }
-        }
-})
+toolxox.com##.swal2-popup.swal2-modal.adblock-swal-popup.swal2-icon-warning.swal2-show
+toolxox.com##.swal2-container.swal2-center.swal2-backdrop-show
 
+! =========================
+! GLOBAL OVERLAY CLEANUP
+! =========================
+
+##.modal-backdrop
+##.overlay
+##.popup-container
+##.adsbox
+##.adblock-overlay
+##.paywall-overlay
+##.paywall
