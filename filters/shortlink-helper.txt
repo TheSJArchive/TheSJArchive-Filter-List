@@ -1,0 +1,40 @@
+! =========================
+! TheSJArchive - Shortlink Helper (safer revision)
+! =========================
+
+! Popup-only control
+||adsco.re^$popup
+||linkvertise.com^$popup
+||ouo.io^$popup
+||clk.sh^$popup
+||bc.vc^$popup
+||fc.lc^$popup
+||shorte.st^$popup
+
+! Forced app redirects
+||intent://*$all
+||app.link^$popup
+||app.link^$document
+
+! Anti-user / anti-adblock scripts
+||disable-devtool.min.js$script
+||*antiadblock*$script
+||*popunder*$script
+||*forcedownload*$script
+||unpkg.com/sweetalert/dist/sweetalert.min.js$script
+||googlesyndication.com^$script
+
+! Overlay cleanup only
+##.adblock-warning
+##.adblock-modal
+##.anti-adblock
+##.popup-overlay
+##.overlay
+##.download-overlay
+##.redirect-overlay
+##div[style*="position: fixed"][style*="z-index"]
+
+! Keep token / real flow working
+@@||*/gettoken.php$xhr
+@@||*/token?$xhr
+@@||*/download-token*$xhr
