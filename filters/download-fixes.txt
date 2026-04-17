@@ -1,0 +1,111 @@
+! =========================
+! TheSJArchive - Download Site Fixes (Unified)
+! =========================
+! Purpose: Fix download sites without breaking functionality
+! Strategy: Element + Script + Targeted Redirect control
+
+! =========================
+! UI / ELEMENT CLEANUP
+! =========================
+
+! Gift4Designer placeholder (only blocks empty preview container)
+gift4designer.net##.flex.aspect-video.items-center.justify-center.text-gray-400
+
+! Generic ad containers
+##.adsbygoogle
+##iframe[src*="doubleclick"]
+##iframe[src*="ads"]
+
+! Fake download buttons / traps
+##a[href*="download"][onclick]
+##button[onclick*="download"]
+
+! Overlay traps (full screen click blockers)
+##div[style*="position: fixed"][style*="z-index"]
+
+! =========================
+! SCRIPT-LEVEL PROTECTION
+! =========================
+
+! Anti-user / anti-dev tools
+||disable-devtool.min.js$script
+||*antiadblock*$script
+
+! Forced behavior scripts
+||*popunder*$script
+||*forcedownload*$script
+
+! Inline JS traps (common patterns)
+##script:has-text(open)
+##script:has-text(popunder)
+
+! =========================
+! TARGETED REDIRECT CONTROL
+! =========================
+
+! Only block forced popups (NOT normal navigation)
+||adsco.re^$popup
+||linkvertise.com^$popup
+||ouo.io^$popup
+||clk.sh^$popup
+
+! Block forced intent redirects
+||intent://*$all
+
+! Block 3rd-party forced redirects only
+||*redirect*$document,third-party
+
+! =========================
+! TOKEN / DOWNLOAD FLOW (CRITICAL ALLOW)
+! =========================
+
+! Generic token systems
+@@||*/gettoken.php$xhr
+@@||*/token?$xhr
+@@||*/download-token*$xhr
+
+! A2ZAPK (confirmed working)
+@@||a2zapk.io/gettoken.php$xhr
+@@||a2zapk.io/ppd.php$xhr
+@@||a2zapk.io/cdn-cgi/*$xhr
+@@||a2zapk.io/cdn-cgi/*$other
+@@||a2zapk.io/images/*$image
+
+! A2ZAPK loaders
+@@||a2zapk.com/images/ajax-loader.gif$image
+@@||a2zapk.com/images/Loading.gif$image
+
+! LiteAPKs
+@@||liteapks.com/wp-json/*$xhr
+@@||liteapks.com/cdn-cgi/*$xhr
+@@||liteapks.com/wp-content/*
+
+! DevUploads / UnlockAPK
+@@||devuploads.com^$xhr
+@@||du2.devuploads.com^$xhr
+@@||dl.unlockapk.com^$xhr
+
+! Spiderdown
+@@||spiderdown.com^$download
+
+! =========================
+! FILE DELIVERY (NEVER BREAK)
+! =========================
+
+@@||*.zip$download
+@@||*.rar$download
+@@||*.7z$download
+@@||*.apk$download
+
+! =========================
+! OPTIONAL: FILE HOST POPUP CLEANUP
+! =========================
+
+||gofile.io/*$popup
+||mediafire.com/*$popup
+||dropgalaxy.*^$popup
+||usersdrive.*^$popup
+
+! =========================
+! END
+! =========================
