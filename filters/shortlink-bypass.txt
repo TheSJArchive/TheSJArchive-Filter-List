@@ -1,0 +1,25 @@
+! Title: TheSJArchive Shortlink Bypass
+! Description: Blocks redirect chains WITHOUT breaking downloads
+! Last updated: 2026-04-17
+
+! =====================
+! === SHORTLINK BLOCK ===
+! =====================
+
+||adsco.re^
+||adf.ly^
+||clk.sh^
+||fc.lc^
+||exe.io^
+||ouo.io^
+||shrinkme.io^
+||linkvertise.com^
+||sub2unlock.com^
+
+! =====================
+! === SAFE BYPASS HELPERS ===
+! =====================
+
+||*redirect*$xhr
+||*popunder*$xhr
+||*adlink*$xhr
